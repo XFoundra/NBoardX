@@ -6,164 +6,35 @@
 <title>PT & Exam Schedule 2025</title>
 <style>
     /* General Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #f0f4f8;
-        color: #2c3e50;
-        line-height: 1.6;
-    }
-
-    /* Header */
-    header {
-        display: flex;
-        align-items: center;
-        background: #2c3e50;
-        padding: 15px 30px;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        color: white;
-        margin-bottom: 20px;
-    }
-
-    header img {
-        height: 60px;
-        margin-right: 20px;
-    }
-
-    header h1 {
-        font-size: 28px;
-        font-weight: 700;
-    }
-
-    /* Sections */
-    .section {
-        background: #fff;
-        padding: 25px;
-        margin: 20px auto;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        max-width: 1200px;
-    }
-
-    h2 {
-        color: #34495e;
-        margin-bottom: 15px;
-        font-size: 24px;
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 5px;
-    }
-
-    /* Lists */
-    ul {
-        padding-left: 20px;
-    }
-
-    li {
-        margin-bottom: 10px;
-    }
-
-    /* Table */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-        font-size: 0.95em;
-    }
-
-    th, td {
-        border: 1px solid #bdc3c7;
-        padding: 10px;
-        text-align: left;
-        transition: all 0.3s ease;
-    }
-
-    th {
-        background-color: #3498db;
-        color: white;
-        font-weight: 600;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-
-    tr:hover {
-        background-color: #d6eaf8;
-    }
-
-    /* PTA/CTA/GTM styles */
-    .exam-code {
-        color: #e74c3c;
-        font-weight: bold;
-        font-size: 1.1em;
-    }
-
-    /* Calendar */
-    .calendar {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .calendar div {
-        background: #ecf0f1;
-        padding: 12px;
-        border-radius: 8px;
-        min-height: 90px;
-        position: relative;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .calendar div:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-
-    .calendar .today {
-        background: #3498db;
-        color: #fff;
-    }
-    img{
-        height: 200px;
-    }
-
-    .calendar .event {
-        font-size: 0.85em;
-        margin-top: 5px;
-        padding: 4px 6px;
-        border-radius: 4px;
-        display: block;
-        font-weight: bold;
-        text-align: center;
-        color: #fff;
-    }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; color: #2c3e50; line-height: 1.6; }
+    header { display: flex; align-items: center; background: #2c3e50; padding: 15px 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); color: white; margin-bottom: 20px; flex-wrap:wrap; }
+    header img { height: 60px; margin-right: 20px; }
+    header h1 { font-size: 28px; font-weight: 700; }
+    .section { background: #fff; padding: 25px; margin: 20px auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); max-width: 1200px; }
+    h2 { color: #34495e; margin-bottom: 15px; font-size: 24px; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95em; }
+    th, td { border: 1px solid #bdc3c7; padding: 10px; text-align: left; transition: all 0.3s ease; }
+    th { background-color: #3498db; color: white; font-weight: 600; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    tr:hover { background-color: #d6eaf8; }
+    .exam-code { color: #e74c3c; font-weight: bold; font-size: 1.1em; }
+    .calendar { display: grid; grid-template-columns: repeat(7,1fr); gap: 10px; margin-top: 15px; }
+    .calendar div { background: #ecf0f1; padding: 12px; border-radius: 8px; min-height: 90px; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .calendar div:hover { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+    .calendar .today { background: #3498db; color: white; font-weight: bold; }
+    img { height: 200px; }
+    .calendar .event { font-size: 0.85em; margin-top: 5px; padding: 4px 6px; border-radius: 4px; display: block; font-weight: bold; text-align: center; color: #fff; }
     .event-pta { background: #e74c3c; }
     .event-cta { background: #8e44ad; }
     .event-meeting { background: #27ae60; }
     .event-error { background: #f39c12; }
-
-    /* Responsive */
-    @media(max-width: 768px) {
-        header {
-            flex-direction: column;
-            text-align: center;
-        }
-        header img {
-            margin-bottom: 10px;
-        }
-        .calendar {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
+    #feedback-btn{ position: fixed; bottom: 20px; right: 20px; background:#3498db; color:white; padding:12px 20px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+    #feedback-btn:hover{ background:#2980b9; }
+    #searchInput{ width: 100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #bdc3c7; font-size:1em; }
+    @media(max-width:768px){ header{ flex-direction: column; text-align: center;} header img{ margin-bottom:10px;} .calendar{ grid-template-columns: repeat(2,1fr);} }
 </style>
 </head>
 <body>
@@ -174,8 +45,9 @@
 </header>
 
 <div class="section">
+    <input type="text" id="searchInput" placeholder="Search PT, CTM, GTM..." onkeyup="searchTable()">
     <h2 style="text-align: center;">All PT Teaching Schedules</h2>
-    <ul>
+    <ul id="ptList">
         <li><strong>PT-7:</strong> 08.09.25–13.09.25 – Derivatives, EM Waves, YDSE, Amines, Biomolecules, POC.</li>
         <li><strong>PT-8:</strong> 15.09.25–20.09.25 – Calculus revision, Ray Optics, Stoichiometry, Gaseous & Liquid State, Intermolecular interactions.</li>
         <li><strong>PT-9:</strong> 22.09.25–27.09.25 – Vectors, Optical instruments, Atomic Physics, Thermodynamics & Thermochemistry.</li>
@@ -196,26 +68,26 @@
 
 <div class="section">
     <h2>Exam Schedule (Date & Day Wise)</h2>
-    <table>
+    <table id="examTable">
         <tr>
             <th>Date</th>
             <th>Day</th>
             <th>PT / Exam</th>
             <th>Syllabus Covered</th>
         </tr>
-        <tr><td>14.09.25</td><td>Sunday</td><td><span class="exam-code">PTA-7</span> / <span class="exam-code">CTA-6</span></td><td>PT-1 to PT-7</td></tr>
-        <tr><td>21.09.25</td><td>Sunday</td><td><span class="exam-code">PTA-8</span> / <span class="exam-code">CTA-7</span></td><td>PT-1 to PT-8</td></tr>
-        <tr><td>28.09.25</td><td>Sunday</td><td><span class="exam-code">PTA-9</span> / <span class="exam-code">CTA-8</span></td><td>PT-1 to PT-9</td></tr>
-        <tr><td>12.10.25</td><td>Sunday</td><td><span class="exam-code">PTA-10</span> / <span class="exam-code">CTA-9</span></td><td>PT-1 to PT-10</td></tr>
-        <tr><td>19.10.25</td><td>Sunday</td><td><span class="exam-code">PTA-11</span> / <span class="exam-code">CTA-10</span></td><td>PT-1 to PT-11</td></tr>
+        <tr><td>14.09.25</td><td>Sunday</td><td><span class="exam-code">PTA-7</span> / <span class="exam-code">CTM-6</span></td><td>PT-1 to PT-7</td></tr>
+        <tr><td>21.09.25</td><td>Sunday</td><td><span class="exam-code">PTA-8</span> / <span class="exam-code">CTM-7</span></td><td>PT-1 to PT-8</td></tr>
+        <tr><td>28.09.25</td><td>Sunday</td><td><span class="exam-code">PTA-9</span> / <span class="exam-code">CTM-8</span></td><td>PT-1 to PT-9</td></tr>
+        <tr><td>12.10.25</td><td>Sunday</td><td><span class="exam-code">PTA-10</span> / <span class="exam-code">CTM-9</span></td><td>PT-1 to PT-10</td></tr>
+        <tr><td>19.10.25</td><td>Sunday</td><td><span class="exam-code">PTA-11</span> / <span class="exam-code">CTM-10</span></td><td>PT-1 to PT-11</td></tr>
         <tr><td>26.10.25</td><td>Sunday</td><td><span class="exam-code">PTA-12</span> / <span class="exam-code">GTM-2</span></td><td>Total Syllabus</td></tr>
-        <tr><td>02.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-13</span> / <span class="exam-code">CTA-11</span></td><td>PT-1 to PT-12</td></tr>
+        <tr><td>02.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-13</span> / <span class="exam-code">CTM-11</span></td><td>PT-1 to PT-12</td></tr>
         <tr><td>09.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-14</span> / <span class="exam-code">GTA-1</span></td><td>Total Syllabus</td></tr>
-        <tr><td>16.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-15</span> / <span class="exam-code">CTA-12</span></td><td>PT-1 to PT-14</td></tr>
+        <tr><td>16.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-15</span> / <span class="exam-code">CTM-12</span></td><td>PT-1 to PT-14</td></tr>
         <tr><td>23.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-16</span> / <span class="exam-code">GTM-3</span></td><td>Total Syllabus</td></tr>
-        <tr><td>30.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-17</span> / <span class="exam-code">CTA-13</span></td><td>PT-1 to PT-16</td></tr>
+        <tr><td>30.11.25</td><td>Sunday</td><td><span class="exam-code">PTA-17</span> / <span class="exam-code">CTM-13</span></td><td>PT-1 to PT-16</td></tr>
         <tr><td>07.12.25</td><td>Sunday</td><td><span class="exam-code">PTA-18</span> / <span class="exam-code">GTA-2</span></td><td>Total Syllabus</td></tr>
-        <tr><td>14.12.25</td><td>Sunday</td><td><span class="exam-code">PTA-19</span> / <span class="exam-code">CTA-14</span></td><td>PT-1 to PT-18</td></tr>
+        <tr><td>14.12.25</td><td>Sunday</td><td><span class="exam-code">PTA-19</span> / <span class="exam-code">CTM-14</span></td><td>PT-1 to PT-18</td></tr>
         <tr><td>21.12.25</td><td>Sunday</td><td><span class="exam-code">PTA-20</span> / <span class="exam-code">GTM-4</span></td><td>Total Syllabus</td></tr>
         <tr><td>28.12.25</td><td>Sunday</td><td><span class="exam-code">PTA-21</span> / <span class="exam-code">GTA-3</span></td><td>Total Syllabus</td></tr>
     </table>
@@ -224,5 +96,40 @@
 <div class="section">
     <h2>Calendar Overview (Sep–Dec 2025)</h2>
     <div class="calendar">
-        <div>Wed<br>10.09<br><span class="event event-error">Error Notes Submission                    </span></div>
-        <div>Thu<br>11.09<br><span class="event event-error">Error Notes Submission & Meeting with Dean</span></div>
+        <div>Wed<br>10.09<br><span class="event event-error">Error Notes Submission</span></div>
+        <div>Thu<br>11.09<br><span class="event event-error">Error Notes Submission & Meeting</span></div>
+        <div>Fri<br>12.09<br><span class="event event-pta">PTA-7</span></div>
+        <div>Sat<br>13.09<br><span class="event event-cta">CTM-6</span></div>
+        <div>Sun<br>14.09<br><span class="event event-meeting">Faculty Meeting</span></div>
+        <!-- Add rest as needed -->
+    </div>
+</div>
+
+<button id="feedback-btn" onclick="window.open('https://forms.gle/YOUR_GOOGLE_FORM_LINK','_blank')">Give Feedback</button>
+
+<script>
+    // Highlight today's date in calendar
+    const today = new Date();
+    document.querySelectorAll('.calendar div').forEach(div => {
+        const text = div.textContent;
+        const dayMonth = text.match(/\d{2}\.\d{2}/);
+        if(dayMonth && dayMonth[0] === ("0"+today.getDate()).slice(-2) + "." + ("0"+(today.getMonth()+1)).slice(-2)){
+            div.classList.add('today');
+        }
+    });
+
+    // Search functionality for PT list and table
+    function searchTable() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        document.querySelectorAll("#ptList li").forEach(li => {
+            li.style.display = li.textContent.toLowerCase().includes(input) ? "" : "none";
+        });
+        document.querySelectorAll("#examTable tr").forEach((tr, i) => {
+            if(i===0) return; // skip header
+            tr.style.display = tr.textContent.toLowerCase().includes(input) ? "" : "none";
+        });
+    }
+</script>
+
+</body>
+</html>
