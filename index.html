@@ -34,6 +34,7 @@
     #feedback-btn{ position: fixed; bottom: 20px; right: 20px; background:#3498db; color:white; padding:12px 20px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
     #feedback-btn:hover{ background:#2980b9; }
     #searchInput{ width: 100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #bdc3c7; font-size:1em; }
+    .access{ background:#27ae60; color:white; padding:10px 15px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:15px; margin-left: 400px; }
     @media(max-width:768px){ header{ flex-direction: column; text-align: center;} header img{ margin-bottom:10px;} .calendar{ grid-template-columns: repeat(2,1fr);} }
 </style>
 </head>
@@ -47,6 +48,12 @@
 <div class="section">
     <input type="text" id="searchInput" placeholder="Search PT, CTM, GTM..." onkeyup="searchTable()">
     <h2 style="text-align: center;">All PT Teaching Schedules</h2>
+    <button class="access"  onclick="window.open('https://drive.google.com/drive/mobile/folders/1XOBGObpYGHd3DRmZQYw7zFS64AE1COAd','_blank')">Access Materials</button>
+    <a href="revision_schedule2025.pdf" download="schedule.pdf">
+    <button style="padding: 10px 20px; background-color: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer;">
+      Download Schedule (PDF)
+    </button>
+  </a>
     <ul id="ptList">
         <li><strong>PT-7:</strong> 08.09.25–13.09.25 – Derivatives, EM Waves, YDSE, Amines, Biomolecules, POC.</li>
         <li><strong>PT-8:</strong> 15.09.25–20.09.25 – Calculus revision, Ray Optics, Stoichiometry, Gaseous & Liquid State, Intermolecular interactions.</li>
